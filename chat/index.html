@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vuetify Parallax Starter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        
+        <div class="py-2">
+            <div class="container" style="transform-origin: center top 0px;">
+                
+                <ul data-uid="59" class="list list--two-line">
+                </ul>
+                <div class="layout">
+                    <div class="flex xs12 xl6">
+                        <div class="input-group input-group--text-field">
+                            <label>Type your message and press Enter to send...</label>
+                            <div class="input-group__input">
+                                <input tabindex="0" type="text">
+                            </div>
+                            <div class="input-group__details">
+                                <div class="input-group__messages">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data () {
+            return {
+                title: 'Your Logo'
+            }
+        }
+    })
+</script>
+</body>
+</html>

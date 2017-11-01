@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vuetify Parallax Starter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <section>
+            <v-parallax src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/0b91bd5cf615f3f0432586717a37bb7f/9d9d4b75ee83c9d14321b9b4_rw_1920.png?h=53106e58c7732a3ff9ec28396db72e84" height="600">
+                <v-layout
+                column
+                align-center
+                justify-center
+                class="white--text"
+              >
+                    <v-flex xs3>
+                        <v-card dark color="grey darken-2" style="margin-top: 40%; min-width: 300px">
+                            <v-card-text>
+                                <v-form ref="form" lazy-validation style="margin: 10%">
+                                    <v-text-field label="Nome" v-model="nickName" :counter="20" required color="grey lighten-4"></v-text-field>
+                                    <v-text-field label="Senha" v-model="password" type="password" color="grey lighten-4"></v-text-field>
+                                    <v-btn @click="Entrar" color="yellow accent-4" href="/chat">Entrar!</v-btn>
+                                    <v-btn @click="Limpar" color="grey darken-4">Limpar</v-btn>
+                                </v-form>
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                </v-layout>
+            </v-parallax>
+        </section>
+    </div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            Entrar () {
+                
+            },
+            Limpar () {
+                this.nickName = ""
+                this.password = ""
+            } 
+        },
+        data () {
+            return {
+                title: 'Your Logo',
+                nickName: '',
+                password: ''
+            }
+        }
+    })
+</script>
+</body>
+</html>
